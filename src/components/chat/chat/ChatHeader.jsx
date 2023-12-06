@@ -13,7 +13,12 @@ const Header = styled(Box)`
     padding: 8px 16px;
     align-items: center;
 `;
-    
+const Statu = styled(Box)`
+
+display: flex;
+
+`;
+
 const Image = styled('img')({
     width: 40,
     height: 40,
@@ -47,10 +52,33 @@ const ChatHeader = ({ person }) => {
     return (
         <Header>
             <Image src={person.picture} alt="dp" />     
-            <Box>
+            <Statu>
                 <Name>{person.name}</Name>
-                <Status>{activeUsers?.find(user => user.sub === person.sub) ? 'Online' : 'Offline'}</Status>    
-            </Box>   
+                <Status>
+    {activeUsers?.find(user => user.sub === person.sub) ? (
+        <div
+            style={{
+                width: '10px',
+                height: '10px',
+                borderRadius: '50%',
+                backgroundColor: 'green',
+                display: 'inline-block',
+                marginRight: '5px'
+            }}
+        ></div>
+    ) : (
+<div
+            style={{
+                width: '10px',
+                height: '10px',
+                borderRadius: '50%',
+                backgroundColor: 'gray',
+                display: 'inline-block',
+                marginRight: '5px'
+            }}
+        ></div>    )}
+</Status>
+            </Statu>   
             <RightContainer>
                 <Search />
                 <MoreVert />    
