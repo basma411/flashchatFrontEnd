@@ -5,7 +5,7 @@ import { AccountContext } from '../context/AccountProvider';
 
 //components
 import ChatDialog from './chat/ChatDialog';
-import LoginDialog from './account/LoginDialog';
+import LoginDialogue from './account/LoginDialog';
 
 const Component = styled(Box)`
     height: 100vh;
@@ -29,7 +29,7 @@ const Messenger = () => {
     
     return (
         <Component>
-              {
+            {
                 account ? 
                 <>
                     <Header>
@@ -39,9 +39,7 @@ const Messenger = () => {
                 </>
                 :
                 <>
-                    {/* <HeaderLogin>
-                        <Toolbar></Toolbar>
-                    </HeaderLogin> */}
+                    
                     <LoginDialogue />
                 </>
             }
