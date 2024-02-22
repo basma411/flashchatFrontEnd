@@ -63,7 +63,7 @@ const ChatHeader = ({ person }) => {
                 borderRadius: '50%',
                 backgroundColor: 'green',
                 display: 'inline-block',
-                // marginRight: '5px'
+                marginRight: '5px'
             }}
         ></div>
     ) : (
@@ -74,7 +74,7 @@ const ChatHeader = ({ person }) => {
                 borderRadius: '50%',
                 backgroundColor: 'gray',
                 display: 'inline-block',
-                // marginRight: '5px'
+                marginRight: '5px'
             }}
         ></div>    )}
 </Status>
