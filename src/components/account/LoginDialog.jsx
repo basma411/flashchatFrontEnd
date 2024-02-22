@@ -12,7 +12,6 @@ const StyledComponent = styled(Box)`
   align-items: center;
   height: 70vh;
   background-color: #f2f2f2;
-
 `;
 
 const StyledContainer = styled(Box)`
@@ -50,10 +49,11 @@ const StyledH2 = styled("h2")`
 `;
 
 const StyledLink = styled("a")`
-  color: #007bff;
+  color: #000;
   text-decoration: none;
   cursor: pointer;
   text-align: center;
+  display: block;
 `;
 
 const LoginDialogue = () => {
@@ -78,7 +78,7 @@ const LoginDialogue = () => {
             <GoogleLogin onSuccess={onLoginSuccess} onError={onLoginError} />
           </Box>
           <Typography variant="body1">
-            <StyledLink href="#" style={{textAlign:'center'}}>or</StyledLink>
+            <StyledLink href="#">or</StyledLink>
           </Typography>
           <StyledForm>
             <StyledInput type="email" placeholder="Enter your email" />
