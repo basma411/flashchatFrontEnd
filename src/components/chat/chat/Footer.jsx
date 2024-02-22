@@ -46,6 +46,7 @@ const Footer = ({ sendText, value, setValue, setFile, file, setImage }) => {
                 const data = new FormData();
                 data.append("name", file.name);
                 data.append("file", file);
+
                 const response = await uploadFile(data);
                 setImage(response.data);
             }
