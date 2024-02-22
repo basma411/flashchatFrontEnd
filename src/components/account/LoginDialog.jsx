@@ -67,17 +67,7 @@ const LoginDialogue = () => {
       hideBackdrop={true}
     >
       <StyledComponent>
-        <StyledContainer>
-          <StyledTitle>To use WhatsApp on your computer:</StyledTitle>
-
-          <StyledList>
-            <ListItem>1. Open WhatsApp on your phone</ListItem>
-            <ListItem>2. Tap Menu Settings and select WhatsApp Web</ListItem>
-            <ListItem>
-              3. Point your phone to this screen to capture the code
-            </ListItem>
-          </StyledList>
-        </StyledContainer>
+       
         <Box style={{position:'relative'}}> 
           <QRCode src={qrCodeImage} alt="qr-code" />
           <Box style={{ position: 'absolute', top: '50%', transform: 'translateX(20%)' }}>
