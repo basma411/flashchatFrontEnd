@@ -24,7 +24,7 @@ const RightComponent = styled(Box)`
 `;
 
 const dialogStyle = {
-    height: '97%',
+    height: '100%',
     width: '100%',
     margin: '20px',
     maxWidth: '100%',
