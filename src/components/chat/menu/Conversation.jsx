@@ -67,7 +67,7 @@ const Conversation = ({ user }) => {
             <Box>
                 <Image src={url} alt="display picture" />
             </Box>
-            <Box style={{width: '100%'}}>
+            <Box style={{width: '100%', height:'100%'}}>
                 <Container>
                     <Typography>{user.name}</Typography>
                     { 
