@@ -58,14 +58,19 @@ const LoginDialogue = () => {
       <StyledComponent>
         <StyledContainer>
           <Typography variant="h5" gutterBottom>
-            Login
+          <h2>Sign In</h2>
+
+<Box >
+  <GoogleLogin onSuccess={onLoginSuccess} onError={onLoginError} />
+</Box>
+<a href="#">or</a>
           </Typography>
+          
           <StyledForm>
             <StyledInput type="email" placeholder="Enter your email" />
             <StyledInput type="password" placeholder="Enter your password" />
             <StyledButton type="submit">Login</StyledButton>
           </StyledForm>
-          <GoogleLogin onSuccess={onLoginSuccess} onError={onLoginError} />
         </StyledContainer>
       </StyledComponent>
     </Dialog>
