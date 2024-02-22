@@ -10,7 +10,7 @@ const StyledComponent = styled(Box)`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
   background-color: #f2f2f2;
 `;
 
