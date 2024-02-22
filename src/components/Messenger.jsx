@@ -19,7 +19,7 @@ const Header = styled(AppBar)`
 `;
     
 const LoginHeader = styled(AppBar)`
-    background: #00bfa5;
+    background: url('https://i.gadgets360cdn.com/large/whatsapp_multi_device_support_update_image_1636207150180.jpg') center/cover;
     height: 200px;
     box-shadow: none;
 `;
