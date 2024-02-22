@@ -8,22 +8,37 @@ import { addUser } from "../../service/api";
 
 const StyledComponent = styled(Box)`
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 `;
 
 const StyledContainer = styled(Box)`
-  padding: 56px 0 56px 56px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
 `;
 
-const dialogStyle = {
-  marginTop: "12%",
-  height: "95%",
-  width: "60%",
-  maxWidth: "100",
-  maxHeight: "100%",
-  borderRadius: 0,
-  boxShadow: "none",
-  overflow: "hidden",
-};
+const StyledForm = styled("form")`
+  display: flex;
+  flex-direction: column;
+`;
+
+const StyledInput = styled("input")`
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+`;
+
+const StyledButton = styled("button")`
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+`;
 
 const LoginDialogue = () => {
   const { setAccount } = useContext(AccountContext);
@@ -39,31 +54,19 @@ const LoginDialogue = () => {
   };
 
   return (
-    <Dialog open={true} PaperProps={{ sx: dialogStyle }} hideBackdrop={true}>
+    <Dialog open={true}>
       <StyledComponent>
-        <Box style={{ position: 'relative' }}>
-          <Box style={{ position: 'absolute', top: '50%', transform: 'translateX(20%)' }}>
-            <GoogleLogin onSuccess={onLoginSuccess} onError={onLoginError} />
-            <a href="#">or</a>
-            <div className="form">
-              <div className="inputBox">
-                <input type="email" placeholder="Enter your email" />
-                <i>Email</i>
-              </div>
-              <div className="inputBox">
-                <input type="password" placeholder="Enter your password" />
-                <i>Password</i>
-              </div>
-              <div className="links">
-                <a href="#">showPassword</a>
-                <a href="#">Signup</a>
-              </div>
-              <div className="inputBox">
-                <input type="submit" value="Login" />
-              </div>
-            </div>
-          </Box>
-        </Box>
+        <StyledContainer>
+          <Typography variant="h5" gutterBottom>
+            Login
+          </Typography>
+          <StyledForm>
+            <StyledInput type="email" placeholder="Enter your email" />
+            <StyledInput type="password" placeholder="Enter your password" />
+            <StyledButton type="submit">Login</StyledButton>
+          </StyledForm>
+          <GoogleLogin onSuccess={onLoginSuccess} onError={onLoginError} />
+        </StyledContainer>
       </StyledComponent>
     </Dialog>
   );
