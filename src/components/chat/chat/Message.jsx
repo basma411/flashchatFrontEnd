@@ -83,7 +83,7 @@ const ImageMessage = ({ message }) => {
             {
                 message?.text?.includes('.pdf') ?
                     <div style={{ display: 'flex' }}>
-                        <img src={'https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/27_Pdf_File_Type_Adobe_logo_logos-512.png'} alt="pdf" style={{ width: 80 }} />
+                        <img src={iconPDF} alt="pdf-icon" style={{ width: 80 }} />
                         <Typography style={{ fontSize: 14 }} >{message.text.split("/").pop()}</Typography>
                     </div>
                 : 
