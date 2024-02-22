@@ -2,12 +2,10 @@ import { useContext } from 'react';
 import { AppBar, Toolbar, styled, Box } from '@mui/material';
 
 import { AccountContext } from '../context/AccountProvider';
-import { emptyChatImage } from '../constants/data';
 
 //components
 import ChatDialog from './chat/ChatDialog';
-import LoginDialogue from './account/LoginDialog';
-import Login from './account/Login';
+import LoginDialog from './account/LoginDialog';
 
 const Component = styled(Box)`
     height: 100vh;
@@ -19,11 +17,7 @@ const Header = styled(AppBar)`
     height: 125px;
     box-shadow: none;
 `;
-const HeaderLogin = styled(AppBar)`
-    background: url(${emptyChatImage}) center/cover;
-    height: 100%;
-    box-shadow: none;
-`;
+    
 const LoginHeader = styled(AppBar)`
     background: #00bfa5;
     height: 200px;
@@ -35,7 +29,7 @@ const Messenger = () => {
     
     return (
         <Component>
-            {
+              {
                 account ? 
                 <>
                     <Header>
