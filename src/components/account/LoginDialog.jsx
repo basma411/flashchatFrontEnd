@@ -43,12 +43,15 @@ const StyledButton = styled("button")`
 const StyledH2 = styled("h2")`
   font-size: 24px;
   margin-bottom: 20px;
+  text-align: center;
+  color: #00A884;
 `;
 
 const StyledLink = styled("a")`
   color: #007bff;
   text-decoration: none;
   cursor: pointer;
+  text-align: center;
 `;
 
 const LoginDialogue = () => {
