@@ -41,7 +41,6 @@ const ChatDialog = () => {
     return (
         <Dialog 
             open={true} 
-            BackdropProps={{style: {backgroundColor: 'unset'}}}
             PaperProps={{ sx: dialogStyle }}
             maxWidth={'md'}
         >
