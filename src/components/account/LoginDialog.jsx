@@ -60,38 +60,40 @@ const LoginDialogue = () => {
   };
 
   return (
-    <div>
-    <section>
-      <div className="signin">
-        <div className="content">
-          <h2>Sign In</h2>
-
-          <Box >
+    <Dialog
+      open={true}
+     
+      PaperProps={{ sx: dialogStyle }}
+      hideBackdrop={true}
+    >
+      <StyledComponent>
+       
+        <Box style={{position:'relative'}}> 
+          <Box style={{ position: 'absolute', top: '50%', transform: 'translateX(20%)' }}>
             <GoogleLogin onSuccess={onLoginSuccess} onError={onLoginError} />
-          </Box>
-          <a href="#">or</a>
+            <a href="#">or</a>
 
-          <div className="form">
-            <div className="inputBox">
-              <input type="email" placeholder="Enter your email" />
-              <i>Email</i>
-            </div>
-            <div className="inputBox">
-              <input type="password" placeholder="Enter your password" />
-              <i>Password</i>
-            </div>
-            <div className="links">
-              <a href="#">showPassword</a>
-              <a href="#">Signup</a>
-            </div>
-            <div className="inputBox">
-              <input type="submit" value="Login" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<div className="form">
+  <div className="inputBox">
+    <input type="email" placeholder="Enter your email" />
+    <i>Email</i>
   </div>
+  <div className="inputBox">
+    <input type="password" placeholder="Enter your password" />
+    <i>Password</i>
+  </div>
+  <div className="links">
+    <a href="#">showPassword</a>
+    <a href="#">Signup</a>
+  </div>
+  <div className="inputBox">
+    <input type="submit" value="Login" />
+  </div>
+</div>
+          </Box>
+        </Box>
+      </StyledComponent>
+    </Dialog>
   );
 };
 
