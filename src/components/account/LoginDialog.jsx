@@ -10,7 +10,7 @@ const StyledComponent = styled(Box)`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 70vh;
 `;
 
 const StyledContainer = styled(Box)`
@@ -40,6 +40,17 @@ const StyledButton = styled("button")`
   cursor: pointer;
 `;
 
+const StyledH2 = styled("h2")`
+  font-size: 24px;
+  margin-bottom: 20px;
+`;
+
+const StyledLink = styled("a")`
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+`;
+
 const LoginDialogue = () => {
   const { setAccount } = useContext(AccountContext);
 
@@ -57,15 +68,13 @@ const LoginDialogue = () => {
     <Dialog open={true}>
       <StyledComponent>
         <StyledContainer>
-          <Typography variant="h5" gutterBottom>
-          <h2>Sign In</h2>
-
-<Box >
-  <GoogleLogin onSuccess={onLoginSuccess} onError={onLoginError} />
-</Box>
-<a href="#">or</a>
+          <StyledH2>Sign In</StyledH2>
+          <Box>
+            <GoogleLogin onSuccess={onLoginSuccess} onError={onLoginError} />
+          </Box>
+          <Typography variant="body1">
+            <StyledLink href="#">or</StyledLink>
           </Typography>
-          
           <StyledForm>
             <StyledInput type="email" placeholder="Enter your email" />
             <StyledInput type="password" placeholder="Enter your password" />
