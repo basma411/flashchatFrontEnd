@@ -10,7 +10,7 @@ import HeaderMenu from './HeaderMenu';
 import InfoDrawer from '../../drawer/Drawer';
 
 const Component = styled(Box)`
-    height: 100%;
+    height: 100PX;
     background: #ededed;
     display: flex;
     padding: 8px 16px;
