@@ -70,13 +70,12 @@ const Conversation = ({ user }) => {
             <Box style={{width: '100%'}}>
                 <Container>
                     <Typography>{user.name}</Typography>
-                    { 
-                        // message?.text && 
-                        // <Timestamp>{formatDate(message?.timestamp)}</Timestamp>        
-                    }
+                    {/* { 
+                        message?.text && 
+                        <Timestamp>{formatDate(message?.timestamp)}</Timestamp>        
+                    } */}
                 </Container>
                 <Box>
-                    <Text>{message?.text?.includes('localhost') ? 'media' : message.text}</Text>
                 </Box>
             </Box>
         </Component>
