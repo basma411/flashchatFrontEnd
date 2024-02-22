@@ -69,7 +69,6 @@ const LoginDialogue = () => {
       <StyledComponent>
        
         <Box style={{position:'relative'}}> 
-          <QRCode src={qrCodeImage} alt="qr-code" />
           <Box style={{ position: 'absolute', top: '50%', transform: 'translateX(20%)' }}>
             <GoogleLogin onSuccess={onLoginSuccess} onError={onLoginError} />
           </Box>
