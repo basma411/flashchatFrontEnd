@@ -13,12 +13,7 @@ const Header = styled(Box)`
     padding: 8px 16px;
     align-items: center;
 `;
-const Statu = styled(Box)`
-
-display: flex;
-
-`;
-
+    
 const Image = styled('img')({
     width: 40,
     height: 40,
@@ -46,39 +41,18 @@ const Status = styled(Typography)`
 `;
 
 const ChatHeader = ({ person }) => {  
+
+    const url = person.picture || defaultProfilePicture;
     
     const { activeUsers } = useContext(AccountContext);
 
     return (
         <Header>
-            <Image src={person.picture} alt="dp" />     
-            <Statu>
+            <Image src={url} alt="display picture" />     
+            <Box>
                 <Name>{person.name}</Name>
-                <Status>
-    {activeUsers?.find(user => user.sub === person.sub) ? (
-        <div
-            style={{
-                width: '10px',
-                height: '10px',
-                borderRadius: '50%',
-                backgroundColor: 'green',
-                display: 'inline-block',
-                marginRight: '5px'
-            }}
-        ></div>
-    ) : (
-<div
-            style={{
-                width: '10px',
-                height: '10px',
-                borderRadius: '50%',
-                backgroundColor: 'gray',
-                display: 'inline-block',
-                marginRight: '5px'
-            }}
-        ></div>    )}
-</Status>
-            </Statu>   
+                <Status>{activeUsers?.find(user => user.sub === person.sub) ? 'Online' : 'Offline'}</Status>    
+            </Box>   
             <RightContainer>
                 <Search />
                 <MoreVert />    
