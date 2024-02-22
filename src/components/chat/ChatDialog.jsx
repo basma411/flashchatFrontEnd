@@ -10,6 +10,7 @@ import EmptyChat from './chat/EmptyChat';
 
 const Component = styled(Box)`
     display: flex;
+    height:100%
 `;
     
 const LeftComponent = styled(Box)`
