@@ -1,28 +1,10 @@
-// common-utils.js
-export const downloadMedia = (e, fileUrl) => {
-  e.preventDefault();
-  
-  fetch(fileUrl)
-    .then(response => response.blob())
-    .then(blob => {
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.style.display = 'none';
-      a.href = url;
-      a.download = 'file.pdf';
-      document.body.appendChild(a);
-      a.click();
-      window.URL.revokeObjectURL(url);
-      document.body.removeChild(a);
-    })
-    .catch(error => console.error('Error downloading file:', error));
-};
+import { useContext } from 'react';
 
-// Message.js
-import React, { useContext } from 'react';
 import { Box, styled, Typography } from '@mui/material';
 import { GetApp as GetAppIcon } from '@mui/icons-material';
+
 import { AccountContext } from '../../../context/AccountProvider';
+
 import { downloadMedia, formatDate } from '../../../utils/common-utils';
 import { iconPDF } from '../../../constants/data';
 
@@ -118,5 +100,6 @@ const ImageMessage = ({ message }) => {
         </div>
     )
 }
+
 
 export default Message;
