@@ -71,8 +71,8 @@ const Conversation = ({ user }) => {
                 <Container>
                     <Typography>{user.name}</Typography>
                     { 
-                        message?.text && 
-                        <Timestamp>{formatDate(message?.timestamp)}</Timestamp>        
+                        // message?.text && 
+                        // <Timestamp>{formatDate(message?.timestamp)}</Timestamp>        
                     }
                 </Container>
                 <Box>
