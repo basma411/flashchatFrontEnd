@@ -1,10 +1,8 @@
 import './style.css'
 import React, { useContext } from "react";
 import { Box, Dialog, List, ListItem, Typography, styled } from "@mui/material";
-import { qrCodeImage } from "../../constants/data";
 import { GoogleLogin } from "@react-oauth/google";
 import  jwtDecode  from "jwt-decode";
-import {createContext} from 'react'
 import {AccountContext} from '../../context/AccountProvider'
 import { addUser } from "../../service/api";
 
