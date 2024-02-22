@@ -13,7 +13,7 @@ const Component = styled(Box)`
     height: 44px;
     background: #ededed;
     display: flex;
-    padding: 8px 16px;
+    padding: 4px 16px;
     align-items: center;
 `;
 
