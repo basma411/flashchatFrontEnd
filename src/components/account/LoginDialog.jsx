@@ -11,6 +11,7 @@ const StyledComponent = styled(Box)`
   justify-content: center;
   align-items: center;
   height: 70vh;
+  background-color: #f2f2f2;
 `;
 
 const StyledContainer = styled(Box)`
@@ -48,7 +49,7 @@ const StyledH2 = styled("h2")`
 `;
 
 const StyledLink = styled("a")`
-  color: #007bff;
+  color: black;
   text-decoration: none;
   cursor: pointer;
   text-align: center;
